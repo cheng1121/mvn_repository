@@ -209,9 +209,10 @@
         <!--    项目打包时会将java目录下中的*.xml文件也进行打包  解决mapper.xml文件找不到问题  -->
         <resources>
             <resource>
-                <directory>src/main/java</directory>
+                <directory>src/main/resources</directory>
                 <includes>
                     <include>**/*.xml</include>
+                    <include>**/*.yml</include>
                 </includes>
                 <filtering>false</filtering>
             </resource>
