@@ -14,7 +14,7 @@
 
     <name>framework</name>
     <description>项目通用框架</description>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
 
 
@@ -23,7 +23,7 @@
         <dependency>
             <groupId>com.cheng</groupId>
             <artifactId>common</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
 
 
