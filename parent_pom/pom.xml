@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--spring boot 父依赖-->
+    <parent>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <version>3.0.1</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.cheng</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>parent</name>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.version>1.0</project.version>
+        <!--            <mybatis.version>3.0.0</mybatis.version>-->
+        <!--使用了mybatis-plus就不用添加mybatis依赖了-->
+        <mybatis.plus.version>3.5.3.1</mybatis.plus.version>
+        <!--        <druid.version>1.2.15</druid.version>-->
+        <spring-boot.version>3.0.1</spring-boot.version>
+        <!--        <pagehelper.starter.version>1.4.5</pagehelper.starter.version>-->
+        <!--        <pagehelper.version>5.3.2</pagehelper.version>-->
+        <springdoc.version>2.0.2</springdoc.version>
+        <!--        <springdoc.version>1.6.12</springdoc.version>-->
+        <knife4j.version>3.0.3</knife4j.version>
+        <mysql.driver.version>8.0.31</mysql.driver.version>
+    </properties>
+
+    <!--  添加全局依赖-->
+<!--    <dependencies>-->
+
+<!--        &lt;!&ndash;测试相关&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-test</artifactId>-->
+<!--        </dependency>-->
+<!--    </dependencies>-->
+
+
+    <!-- 项目依赖管理 -->
+    <dependencyManagement>
+        <dependencies>
+<!--            <dependency>-->
+<!--                <groupId>com.cheng</groupId>-->
+<!--                <artifactId>user</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.cheng</groupId>-->
+<!--                <artifactId>web</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>com.cheng</groupId>-->
+<!--                <artifactId>framework</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>com.cheng</groupId>-->
+<!--                <artifactId>common</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+
+
+            <!--spring web模块-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+                <exclusions>
+                    <!--去掉logback的依赖-->
+                    <!--                    <exclusion>-->
+                    <!--                        <groupId>org.springframework.boot</groupId>-->
+                    <!--                        <artifactId>spring-boot-starter-logging</artifactId>-->
+                    <!--                    </exclusion>-->
+                    <!--去掉json依赖-->
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-json</artifactId>
+                    </exclusion>
+
+                </exclusions>
+            </dependency>
+
+
+            <!--工具类-->
+            <!--            <dependency>-->
+            <!--                <groupId>cn.hutool</groupId>-->
+            <!--                <artifactId>hutool-all</artifactId>-->
+            <!--                <version>${hutool.version}</version>-->
+            <!--            </dependency>-->
+
+
+            <!--json解析-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.alibaba.fastjson2</groupId>-->
+            <!--                <artifactId>fastjson2</artifactId>-->
+            <!--                <version>${fastjson2.version}</version>-->
+            <!--            </dependency>-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-json</artifactId>
+                <version>${spring-boot.version}</version>
+
+            </dependency>
+            <!--mybatis分页插件starter-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.github.pagehelper</groupId>-->
+            <!--                <artifactId>pagehelper-spring-boot-starter</artifactId>-->
+            <!--                <version>${pagehelper.starter.version}</version>-->
+            <!--            </dependency>-->
+
+            <!--            <dependency>-->
+            <!--                <groupId>com.github.pagehelper</groupId>-->
+            <!--                <artifactId>pagehelper</artifactId>-->
+            <!--                <version>${pagehelper.version}</version>-->
+            <!--            </dependency>-->
+
+
+            <!--数据库映射框架-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.driver.version}</version>
+            </dependency>
+
+            <!--数据库连接池druid-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.alibaba</groupId>-->
+            <!--                <artifactId>druid-spring-boot-starter</artifactId>-->
+            <!--                <version>${druid.version}</version>-->
+            <!--            </dependency>-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <!--添加log输出依赖-->
+            <!--排除logback-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-logging</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>*</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-log4j2</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <!--swagger3接口文档-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springdoc</groupId>-->
+            <!--                <artifactId>springdoc-openapi-ui</artifactId>-->
+            <!--                <version>${springdoc.version}</version>-->
+            <!--            </dependency>-->
+
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-springdoc-ui</artifactId>
+                <version>${knife4j.version}</version>
+
+            </dependency>
+
+            <!--2.0.0-RC1版本的springdoc-->
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+            <!--redis缓存依赖-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springframework.boot</groupId>-->
+            <!--                <artifactId>spring-boot-starter-data-redis</artifactId>-->
+            <!--                <version>${spring-boot.version}</version>-->
+            <!--            </dependency>-->
+            <!--redis缓存依赖-->
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <finalName>learn</finalName>
+        <!--    项目打包时会将java目录下中的*.xml文件也进行打包  解决mapper.xml文件找不到问题  -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <!--spring boot maven 插件-->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--  不需要版本号，自动用parent中定义的版本   -->
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>mvn-github</id>
+            <name>cheng-github-maven</name>
+            <url>https://maven.pkg.github.com/cheng1121/mvn_repository</url>
+        </repository>
+        <snapshotRepository>
+            <id>mvn-github</id>
+            <name>cheng-github-maven</name>
+            <url>https://maven.pkg.github.com/cheng1121/mvn_repository</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <!-- 报错Cannot resolve plugin org.apache.maven.plugins:maven-clean-plugin:3.1.0时添加如下配置，并重启idea -->
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>alimaven</id>-->
+<!--            <url>http://maven.aliyun.com/repository/public</url>-->
+<!--        </repository>-->
+<!--        <repository>-->
+<!--            <id>huaweicloud</id>-->
+<!--            <url>https://mirrors.huaweicloud.com/repository/maven</url>-->
+<!--        </repository>-->
+
+<!--    </repositories>-->
+
+<!--    <pluginRepositories>-->
+<!--        <pluginRepository>-->
+<!--            <id>alimaven</id>-->
+<!--            <url>http://maven.aliyun.com/repository/public</url>-->
+<!--        </pluginRepository>-->
+<!--    </pluginRepositories>-->
+
+</project>
