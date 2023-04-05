@@ -34,7 +34,6 @@
         <!--        <springdoc.version>1.6.12</springdoc.version>-->
         <knife4j.version>3.0.3</knife4j.version>
         <mysql.driver.version>8.0.31</mysql.driver.version>
-        <p6spy.version>3.9.1</p6spy.version>
     </properties>
 
     <!--  添加全局依赖-->
