@@ -18,7 +18,7 @@ public class BaseEntity {
 
     @Schema(name = "createUser",description = "创建人")
     @TableField(value = "CREATEUSER")
-    private Integer createUser;
+    private String createUser;
 
     @Schema(name = "updateTime",description = "修改时间")
     @TableField(value = "UPDATETIME")
@@ -26,7 +26,7 @@ public class BaseEntity {
 
     @Schema(name = "updateUser",description = "修改人")
     @TableField(value = "UPDATEUSER")
-    private Integer updateUser;
+    private String updateUser;
 
     @Schema(name = "deleteTime",description = "删除时间")
     @TableField(value = "DELETETIME")
@@ -38,7 +38,7 @@ public class BaseEntity {
 
     @Schema(name = "deleteUser",description = "删除人")
     @TableField(value = "DELETEUSER")
-    private Integer deleteUser;
+    private String deleteUser;
 
 
     public LocalDateTime getCreateTime() {
@@ -49,11 +49,11 @@ public class BaseEntity {
         this.createTime = createTime;
     }
 
-    public Integer getCreateUser() {
+    public String getCreateUser() {
         return createUser;
     }
 
-    public void setCreateUser(Integer createUser) {
+    public void setCreateUser(String createUser) {
         this.createUser = createUser;
     }
 
@@ -65,11 +65,11 @@ public class BaseEntity {
         this.updateTime = updateTime;
     }
 
-    public Integer getUpdateUser() {
+    public String getUpdateUser() {
         return updateUser;
     }
 
-    public void setUpdateUser(Integer updateUser) {
+    public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
 
@@ -89,11 +89,11 @@ public class BaseEntity {
         this.deleteFlag = deleteFlag;
     }
 
-    public Integer getDeleteUser() {
+    public String getDeleteUser() {
         return deleteUser;
     }
 
-    public void setDeleteUser(Integer deleteUser) {
+    public void setDeleteUser(String deleteUser) {
         this.deleteUser = deleteUser;
     }
 }

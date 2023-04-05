@@ -101,7 +101,7 @@ public class ErrorManager {
      */
     private static int generateCode(IProjectModule IProjectModule, IErrorCode errorCode){
          // 万位以上为 项目标识  百位以上为 模块标识  百位以下的为项目中的错误码
-        return IProjectModule.getProjectCode() * 10000 + IProjectModule.getModuleCode() + 100 + errorCode.getNodeNum();
+        return IProjectModule.getProjectCode() * 10000 + IProjectModule.getModuleCode() * 100 + errorCode.getNodeNum();
     }
 
     /**
