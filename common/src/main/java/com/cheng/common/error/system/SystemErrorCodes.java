@@ -10,7 +10,9 @@ import com.cheng.common.error.manager.ErrorManager;
 public enum SystemErrorCodes implements IErrorCode {
 
     SUCCESS(0, "ok"),
-    SYSTEM_ERROR(1, "system com.cheng.common.error");
+    SYSTEM_ERROR(1, "system com.cheng.common.error"),
+    DECODE_ERROR(2,"解密错误,请检查加密数据")
+    ;
 
     private final int nodeNum;
     private final String msg;
