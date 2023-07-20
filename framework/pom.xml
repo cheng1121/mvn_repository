@@ -16,14 +16,16 @@
     <description>项目通用框架</description>
     <version>1.0.3</version>
 
-
+    <properties>
+        <common.version>1.0.3</common.version>
+    </properties>
 
     <dependencies>
 
         <dependency>
             <groupId>com.cheng</groupId>
             <artifactId>common</artifactId>
-            <version>1.0.2</version>
+            <version>${common.version}</version>
         </dependency>
 
 
