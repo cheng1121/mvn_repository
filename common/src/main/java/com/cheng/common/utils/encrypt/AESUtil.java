@@ -50,9 +50,7 @@ public class AESUtil {
         SecureRandom random = SecureRandom.getInstanceStrong();
         // 随机生成16位的iv
         byte[] iv = random.generateSeed(16);
-        System.out.println("iv length ===== " + iv.length + " data = " + Arrays.toString(iv));
         byte[] data = encrypt(content, key, iv);
-        System.out.println("data length ===== " + data.length + " data = "+ Arrays.toString(data));
         return Base64Util.encrypt(join(data,iv));
     }
 
