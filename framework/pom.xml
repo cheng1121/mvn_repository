@@ -17,7 +17,7 @@
     <version>1.0.4.1-SNAPSHOT</version>
 
     <properties>
-        <common.version>1.0.3-SNAPSHOT</common.version>
+        <common.version>1.0.3.1-SNAPSHOT</common.version>
     </properties>
 
     <dependencies>
