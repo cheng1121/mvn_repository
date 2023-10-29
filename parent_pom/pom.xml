@@ -236,26 +236,28 @@
     </build>
 
     <distributionManagement>
-        <!--部署地址只能使用1个-->
+        <!--只能使用1个repository和一个snapshotRepository-->
+        <!--本地-->
         <repository>
-            <id>mvn-github</id>
-            <name>cheng-github-maven</name>
-            <url>https://maven.pkg.github.com/cheng1121/mvn_repository</url>
+            <id>local_repo</id>
+            <name>cheng-local-maven</name>
+            <url>file:///Users/cheng/development/gitee_repository</url>
         </repository>
         <snapshotRepository>
-            <id>mvn-github</id>
-            <name>cheng-github-maven</name>
-            <url>https://maven.pkg.github.com/cheng1121/mvn_repository</url>
+            <id>local_repo</id>
+            <name>cheng-local-maven</name>
+            <url>file:///Users/cheng/development/gitee_repository</url>
         </snapshotRepository>
+  <!--github-->
 <!--        <repository>-->
-<!--          <id>mvn-gitee</id>-->
-<!--          <name>cheng-gitee-maven</name>-->
-<!--          <url>https://gitee.com/lcLC_cheng/mvn_repository/raw/main</url>-->
+<!--            <id>mvn-github</id>-->
+<!--            <name>cheng-github-maven</name>-->
+<!--            <url>https://maven.pkg.github.com/cheng1121/mvn_repository</url>-->
 <!--        </repository>-->
-<!--          <snapshotRepository>-->
-<!--            <id>mvn-gitee</id>-->
-<!--            <name>cheng-gitee-maven</name>-->
-<!--            <url>https://gitee.com/lcLC_cheng/mvn_repository/raw/main</url>-->
+<!--        <snapshotRepository>-->
+<!--            <id>mvn-github</id>-->
+<!--            <name>cheng-github-maven</name>-->
+<!--            <url>https://maven.pkg.github.com/cheng1121/mvn_repository</url>-->
 <!--        </snapshotRepository>-->
     </distributionManagement>
 

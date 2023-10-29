@@ -14,10 +14,10 @@
 
     <name>framework</name>
     <description>项目通用框架</description>
-    <version>1.0.4</version>
+    <version>1.0.4-SNAPSHOT</version>
 
     <properties>
-        <common.version>1.0.3</common.version>
+        <common.version>1.0.3-SNAPSHOT</common.version>
     </properties>
 
     <dependencies>
